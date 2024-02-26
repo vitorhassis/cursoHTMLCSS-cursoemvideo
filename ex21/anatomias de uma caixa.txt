@@ -1,0 +1,8 @@
+height = altura vertical da palavra
+hidth = largura da frase
+border = borda, linha que circunda o conteudo
+paddind = gapzin, da uma engordada no elemento pra borda ficar mais distante do conteudo, tem padding em todas as 
+direcoes
+margin = margem, espaco por fora da borda
+outline = contorno tracado da borda, dentro da margin
+

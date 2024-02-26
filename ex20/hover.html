@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo de houver</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div > p /*o div tem um filho q eh o paragrafo*/ {
+            display: none;
+        }
+        div:hover /*hover eh uma pseudoclasse, qnd eu passar o mouse por cima */ > p{
+            display: block;
+            color: white;
+            background-color: red;
+        }
+        div:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>exemplo de hover</h1>
+    <p>passe o mouse sobre o texto abaixo</p>
+    <div>passe o mouse aqui
+        <p>TEXTO ESCONDIDO</p>
+    </div>
+    <p>fim do exemplo</p>
+
+    
+    
+</body>
+</html>

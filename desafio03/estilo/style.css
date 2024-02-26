@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*link da fonte import la em google fonts, e precisa por a font-family dela la em root*/
+
+@font-face {
+    font-family: 'android';
+    src: url( '../fontes/idroid.otf') format('opentype'); /*../fontes pq style.cs ta numa pasta, a fonte ta em uma anterior, ent vc precisa falar pra ele voltar uma pag, ou seja, ..*/
+    font-weight: normal;
+}
+
+/*
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+paletas de cores escolhido por ele, em escala de tons claros para escuros
+*/
+
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: 'android', cursive;
+
+}
+
+/* esse *{ significa global, td oq tiver abaixo dele vai ter essas config q vc por, no caso, o margin e o padding zero eh para tirar aquele gap q a gnt n conseguia tirar, se vc ter inspec e selecionar, vai ver q o h1, p, h2, tinha margem. logo, a gnt fazendo isso, tira o gap e junta tudo*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #84ad3d49;
+    font-family: var(--fonte-padrao);
+}
+a.externo::after{
+    content: '\00A0\1F517';
+} /*aq fizemos o seguinte, todo link que for externo, vai ter o content do link, o icon de correntinha que eh usado em html. criamos uma classe com nome externo para os links desejados, por isso o .externo, os dois dois pontos, ::, representa depois, um so : representa antes, e os dois::, depois, mas depois literalmente, em relacao a posicao da palavra, em sequencia;*/
+
+header{
+    background-color: var(--cor4);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor4), var(--cor5));
+}
+header > p {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px; /*isso aq, eh para ele ficar em duas linhas, dai vc boto q o max de tamanho dele eh 600px, pra ele ficar em duas linhas, e o margin eh pra ele centralizar e ajustar*/
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px; /*pra qnd ir diminuindo a pag n ficar colado a letra no limite, bota um padding pra ficar bonitin o gap*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.321);
+    margin-bottom: 10px;
+}
+header > h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.269);
+    font-weight: normal;
+    
+}
+main h1{
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.5em;
+}
+main h2{
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent); /*faz o fade pra direita, indo pro transparente*/
+    text-indent: 8px; /*so pra ir um gapzin pra direita, sem precisar add padding*/
+    font-weight: normal;
+}
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+}
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor4);
+    background-color: var(--cor1);
+    padding: 2px 4px;
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4); /* le esse :hover assim = quando eu passar (Tag) por cima*/
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 1px 6px 7px rgba(0, 0, 0, 0.447);
+    text-align: center;
+
+
+}
+nav > a{
+    color: white;
+    padding: 10px; /* pensar padding = mais gordinho*/
+    text-decoration: none;
+    font-weight: bold; /*negrito*/
+    border-radius: 3px;
+    transition-duration: 0.5s; /* esse transition eh esse efeito bonitinho que da, em vc colocar o cursor do mouse e ele aparecer*/
+   
+}
+nav > a:hover{
+    background-color:  #2fa866;
+    color: #063d1e;
+    
+}
+main{
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px; /*ate onde ela quebra*/
+    margin: auto; /*sempre ficar centralizado, independente do tamanho da pag*/
+    padding: 20px; /* pra n ficar mt colado, dar um gapzin*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.469);
+    margin-bottom: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; /*aq botamos a borda redondada apenas em baixo*/
+}
+
+main h1{
+    color: var(--cor5)
+}
+
+main h2{
+    font-family: var(--fonte-android);
+}
+main p{
+    margin: 15px 0px 15px 0px; /*da aquela separada, lembrando que eh tipo um relogio no sentido horario, e n usa > pra dizer q esse p pode estar em qualquer lugar, ele vai ter essas caract*/
+    text-align: justify; /*esse justify eh para as letras ficarem certinhas*/
+    text-indent: 30px; /*isso eh a margem do texto, paragrafo*/
+    font-size: 1em; /*engrossar a palavra*/
+    line-height: 2em; /*espaco entre as linhas*/
+}
+main img {
+    width: 100%; /*se adaptar, ir ficando grande e pequena*/
+}
+main img.pequena{
+    max-width: 350px; /*pra ficar uma res legal, e qnd diminuir, n ficar diminuindo ou aumentando*/
+    display: block;
+    margin: auto; /*o certo, era colocar uma imagem pequena pra fazer igual as outras, pra qnd diminuir o tamanho, mas ele n fez e optou por fazer uma classe, diminuir o tamanho em 50%, e era so botar a margin em auto, mas n foi, ent qnd n for a margin vc bota o display block pq nem toda imagem eh um bloco*/
+}
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    position: relative;
+    padding-bottom: 59%;
+}
+div.video >iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.357);
+}
+aside >h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /*isso eh pq qnd vc n colocar margin, vai ficar um espaco branco entre o background aside e o background do h3, dai ele vai perder a borda arredondada, ent vc bota a borda aq agr no aside h3*/
+    border-radius: 6px 6px 0px 0px; /*aq eh para o padding inferior n ficar redondo, ficar retinho*/
+    
+}
+aside > ul{
+   list-style-type: '\2714\00A0'; /*isso eh p colocar o icon de verificado, lembrar de buscar icons la em emojipedia, e copiar so pos o sinal de mais, se vc achar q ficou mto colado, vc pode colocar 00A0 que esse 00A0 representa um espacozin, se vc botar duas vezes, vai ficar dois espacos*/
+    list-style-position: inside; /*bolinha dentro do inside*/
+    columns: 2; /*quantas colunas vc quer, 2 eh god*/
+}
+footer{
+    background-color: var(--cor5);
+    color: white; /*lembrando q color solo, eh para letras*/
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+
+}
+footer > p > a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor1);
+}

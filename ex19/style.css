@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*\
+  em HTML eh id = em CSS eh # lembrando q id eh so para um
+  em HTML eh class = em CSS eh .  aq class eh para mais de um  */
+
+body {
+    background: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+    color: rgb(187, 105, 4);
+}
+h1#principal {  /* isso aq eh chamado de seletor personalizado */
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+h2 {
+    color: rgb(106, 59, 3);
+}
+
+.basico { /* class n precisa nomear, ou seja, por h1.basico, so poe o .basico*/
+    background-color: rgb(245, 245, 220);
+    font-weight:lighter;
+
+}
+.intermediario {
+    background-color: rgb(173, 158, 135);
+
+}
+.avancado{
+    background-color: rgba(135, 89, 19, 0.487);
+
+}
+.destaque {
+    background-color: rgba(255, 255, 0, 0.535);
+}

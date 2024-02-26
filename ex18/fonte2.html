@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fontes externas</title>
+    <style>
+        /*aq eh p fontes externas, usa o site dafont.com para fontes mais especificas, dai faz esse role ai abaixo*/
+        @font-face {
+            font-family: 'love' ;
+            src: url(fonts/Filxgirl.TTF) format(-truetype), url(fonts/Filxgirl.TTF);
+            font-weight: normal;
+            font-style: normal;
+
+            /*tipos de format()
+            -opentype otf
+            -truetype ttf
+            -embedded-opentype
+            -truetype-aat (aaple advanced)
+            -svg
+            */
+        }
+        body {
+            font-family: 'Arial', Helvetica, sans-serif;
+        }
+       
+        h1 {
+            font-family: 'love', Times, serif;
+            font-size: 5em;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>dia dos namorados</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, facilis impedit ducimus minus ipsam blanditiis quibusdam deleniti numquam illo accusamus officia repudiandae! Voluptate ratione cumque accusantium dolorum facilis saepe. At.</p>
+    
+</body>
+</html>

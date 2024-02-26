@@ -1,0 +1,14 @@
+box-level 
+-a box vai ficar entre os elementos, vc da enter ele vai ficar um espaco em baixo, e dai continua, ele fica um 
+espaco tipo no meio
+-quebra a linha, isolado, retangulao
+-vai ocupar todo o espaco lateralmente
+-div, qnd usa div vc usa uma box-level
+-h1 h6 p main header nav article ...
+
+
+
+inline-level
+-a box eh feita em sequencia, ele n quebra a linha,a box eh feita entre as linhas, retangulin
+-<span> significa expansao de codigo, n vai ocupar a linha toda\\
+-span a code small strong em sup sub label button input ...

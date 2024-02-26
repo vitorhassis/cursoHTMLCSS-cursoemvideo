@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grouping tags</title>
+    <style>
+        /*a dica eh ir olhando as tag e o site, pra ter a nocao, mas a ideia eh oq ta embaixo, deixar de usar 300div q se usava no html4 para novas tags com sentido semantico, html5*/
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(105, 101, 101);
+        }
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        nav{
+            background-color: rgba(99, 93, 93, 0.35);
+            padding: 3px;
+            box-shadow: 5px 5px rgba(0, 0, 0, 0.493);
+            
+        }
+        nav > a{
+            text-decoration: none;
+            color: rgb(74, 77, 79);
+            font-weight: bold;
+             margin-right: 70px;
+
+        }
+        nav > a:hover{
+            text-decoration: underline;
+            
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px;
+            box-shadow: 4px 4px 9px 0px black;
+        }
+        footer{
+            background-color: rgb(105, 101, 101);;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+        article {
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.351);
+            text-align: center;
+        }
+        article > aside{
+            background-color: rgba(0, 0, 0, 0.269);
+            text-align: center;
+        }
+        footer > p{
+            margin: 0px;
+            background-color: rgba(39, 37, 37, 0.454);
+        }
+        div#bola{
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            background-color:rgb(255, 255, 255);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!---em vez de spamar div, agr no html5 q eh mais evoluido, tem essas novas tags como header cabecalho, footer rodape, que da um maior valor semantico ao bgl-->
+    <header>
+        <h1>MEU SITE</h1>
+        <nav> <!--- menu de navegacao-->
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+            <a href="">link</a>
+        </nav>
+
+    </header>
+    <main>
+        <section id="assuntos">
+            <article>
+                <h2>NOTICIAS DO BRASIL</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, blanditiis ex! Porro repudiandae temporibus quia odit soluta earum atque tempore fugiat dignissimos saepe, explicabo commodi, nam, accusamus ducimus! Maxime, laudantium.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam eos itaque aperiam recusandae iure quae sunt, earum ex alias obcaecati delectus, ipsam est. Error aspernatur consequuntur impedit numquam! Non, totam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia temporibus minima odio asperiores voluptate similique reprehenderit! Nemo, aut, delectus repudiandae praesentium voluptas fugit nisi dolor debitis dicta modi optio quos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad eaque quas modi enim exercitationem. Dolor illo corporis, sunt dolorum laboriosam facere culpa nobis quae temporibus nostrum assumenda perferendis quam. Aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quis dolor dolore minus, reiciendis dolorum tempora libero aut tempore veritatis quibusdam numquam a architecto? Maiores dolores optio labore eveniet neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aut ea perferendis repudiandae est inventore iure voluptatum, distinctio quo possimus provident! Dolores reiciendis et ut quisquam aperiam porro? Cumque, eaque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur consectetur sint distinctio libero, accusamus quasi totam incidunt? Repellat ab iure perspiciatis repudiandae amet similique ea quaerat, laborum ipsum, iusto earum.
+                </p>
+                <aside>
+                    <p>Artigo escrito por jose</p>
+                </aside>
+
+            </article>
+            <article>
+
+            </article>
+
+        </section>
+    </main>
+    <footer>
+        <p>desenvolvido pelo CursoemVideo</p>
+        <div id="bola"></div>
+
+    </footer>
+    
+</body>
+</html>

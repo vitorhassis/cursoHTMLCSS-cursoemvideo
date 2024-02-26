@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>videos com HTML5</title>
+</head>
+
+<body>
+    <h1>inserindo videos hospedados localmente</h1>
+    <p>este video está hospeddo no meu proprio servidor</p>
+    <!--- tem navegador que é compativel com mp4, ogv, webM, dai só coisar la no handbrake, entao vamos colocar todos para nao dar bosta--->
+    <video width="500px" controls autoplay loop>
+        <source src="midia/mp4.mp4" type="video/mp4">
+        <!--- lembrando que source é uma tag para usar em multiplos recursos de midia-->
+        <source src="midia/webM.webm" type="video/mp4">
+        <source src="midia/mp4ogv.ogv" type="videoogv">
+        <source src="midia/mp4.mp4" type="video/mp4">
+        <!--- qnt mais arquivos convertidos melhor, pq dai vc tem mais acessibilidade-->
+        <p>seu navegador nao tem compatibilidade com reprodução de videos</p>
+    </video>
+    <h1>inserindo videos do youtube</h1>
+    <iframe width="500" height="315" src="https://www.youtube.com/embed/FdE5G95B7Mg?si=a3JzWiKDHch9H4wz"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    <!--- isso aq usa um servidor pra rodar o video, deixando o site bem mais leve, e esse codigo todo a cima vc pega em copiar apos entrar em incorporar em compartilhar o video-->
+    <h1>inserindo videos do vimeo</h1>
+    <p>logar e copiar o link aq do incorporado </p>
+
+
+
+</body>
+
+</html>
