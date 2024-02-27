@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alinhamento vertical</title>
+    <style>
+        #container {
+            background-image: url('imagens-cap19/target001.png');
+            background-size: 100% 100%;
+
+            /*resumindo esse exercicio. se vc quer q o conteudo fique centralizado no container, vc precisa colocar a posicao relative no container, e absolute no conteudo. precisa por o left e top em 50% no conteudo, e colocar a tag transform translate -50% -50%, esse eh o passo a passo para centralizar um elemento, no caso o conteudo, verticalmente e horizontalmente. para isso, o conteudo tem q estar dentro do container*/
+
+            position: relative;
+            background-color: purple;
+            padding: 50vh;
+            height: 10px;
+        }
+
+        #conteudo {
+            background-image: url('imagens-cap19/target001.png');
+            background-size: 100% 100%;
+
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+
+</body>
+
+</html>
