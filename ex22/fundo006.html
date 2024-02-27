@@ -4,24 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>documentrro</title>
+    <title>fundo fixo de tela</title>
     <style>
         body {
             height: 100vh;
             /*lembrando q isso eh p ocupar 100% do espaco "certo"*/
-            background-color: black;
+            /*background-color: black;
             background-image: url('imagens-cap19/wallpaper002.jpg');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
             /* cover= nao exibe 100% da imagem mas ocupa 100% da view port sem esticar, independente do tamanho da tela, sem ficar com borda preta etc, vai preencher a tela inteira. 
             contain = vai usar 100% da imagem, mas vai deixar gap com barra preta, etc*/
+            background-attachment: fixed; /*deixar o fundo fixo*/
+
+            /*shorthand - background
+            color > image > position > repeat > [size] > attachment*/
+            
+            background: black url('imagens-cap19/wallpaper002.jpg') center center no-repeat  fixed; 
+            background-size: cover /*aq o cover na sequencia, n funciona, ent adicionar ele abaixo, apesar de no manual falar que era pra dar certo. ent colocar na ordem, mas o size, o cover, vc bota embaixo separad
+
+
 
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             /*padding eh espaco interno*/
             margin: auto;
@@ -52,7 +61,19 @@
             laudantium molestias eligendi ab molestiae dignissimos doloremque laboriosam ex consequatur cum doloribus, obcaecati
             ullam officia, iusto odio fugit. Ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iste dolore unde
             recusandae doloremque, omnis voluptatem id odio obcaecati vel laudantium optio molestiae saepe perferendis inventore
-            ratione deleniti dicta laborum!</p>
+            ratione deleniti dicta laborum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quidem cum in id
+            aut? Non exercitationem cupiditate reiciendis iusto omnis ipsa, animi veritatis commodi labore culpa rerum perspiciatis,
+            perferendis totam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, veritatis. Animi adipisci
+            voluptatibus et natus pariatur numquam, culpa iure officia repellendus amet maiores ex facilis. Sunt sed maxime officiis
+            vel? Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, laborum illum mollitia similique quo sunt temporibus
+            officiis dolores accusamus dicta maxime eius at? Quos doloribus atque laboriosam nemo illo earum! Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. Aut voluptatum sunt possimus repellat soluta et odio magnam eos. Est, ipsa
+            provident. Repellat sequi recusandae odit pariatur suscipit voluptatem iusto dolor. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Earum ut itaque asperiores tenetur, mollitia vel minima voluptatibus perspiciatis nihil
+            unde cum, ipsum eveniet illo necessitatibus tempore dolorum sapiente harum. Nisi! Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Veniam repellat veritatis vitae delectus corporis molestiae consectetur, tempore voluptate
+            neque numquam vel ullam nesciunt. Debitis laborum provident tenetur! Inventore, magni praesentium? lorem
+            </p>
     </main>
 
 </body>
