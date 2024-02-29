@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+
+html, body {
+    background-color: rgb(127, 125, 125);
+    margin: 0;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+ 
+
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+    
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /*as primeiras letras serao maiores, em vez de botar td em maiusculo. fica mais sutil*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a, footer a {
+    color:white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em; /*espacamento entre as linhas*/
+    
+}
+
+section.imagem > p {
+    padding-left: 30px;
+    background-color: rgba(0, 0, 0, 0.462);
+    width: 300px;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+
+}
+
+section.imagem {
+    background-color: rgb(42, 42, 42);
+    color: white;\
+    
+
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    bottom: 0px;
+    width: 100vw;
+
+}
