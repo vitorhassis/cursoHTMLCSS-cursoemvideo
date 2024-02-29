@@ -5,6 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+    
+        }
+    
+        table {
+            width: 400px;
+            height: 400px;
+            border-collapse: collapse;
+            /*deixa coladinho*/
+    
+        }
+    
+        tr.linha {
+            background-color: rgb(123, 122, 121);
+        }
+    
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            /*alinhamento horizontal*/
+            vertical-align: middle;
+    
+        }
+    
+        .numero {
+            text-align: right;
+    
+    
+        }
+    
+    
+    
+    
+        td.dado {
+            background-color: yellow;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,6 +54,30 @@
         TABLE ROW = linha de tabela
             TABLE HEADER = cabecalho de tabela
             TABLE DATA = dado de tabela-->
+        <table>
+            <tr> <!--- primeira linha-->
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td class="numero">C2</td>
+            </tr>
+            <tr> <!--- terceira linha-->
+                <td>A3</td>
+                <Td>B3</Td>
+                <td class="numero">C3</td>
+            </tr>
+            <tr> <!---quarta linha-->
+                <td>A4</td>
+                <Td>b4</Td>
+                <td>C4</td>
+        
+            </tr>
+        
+        </table>
 
 
 
