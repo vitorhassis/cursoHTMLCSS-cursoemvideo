@@ -13,6 +13,14 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+        
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         td,
@@ -22,10 +30,21 @@
 
         }
 
-        thead,
-        tfoot {
+        thead,tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        /*pra fazer, o thead, ou seja estado e populacao ficar colado no topo da pagina, pra qnd scrollar pra baixo ele ficar junto, bota aquele position relative no table, e poisiton stick e top 0 aq no thead tr th. eesse efeito de colar acaba qnd acaba a tabela, ex colocamos varios lorems pra provar, fica um cabecalho fixo ali na tabela, mas quando ela acaba, ele termina tbm*/
+
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray; /*esse tr.nth-child 2n eh p a cor escolhida, variar de 2 em 2. se vc botar entre parenteses, odd ele vai trocar ar cores no impar. o 2n eh par, odd eh impar */
         }
 
         td.num {
@@ -40,7 +59,8 @@
     <h1>uso de tabelas grandes</h1>
     <!--
         ANATOMIA PARA TABELAS GRANDES
-        TABLE
+        TABLE 
+              CAPTION
               THEAD
                   TR, TD, TH
               TBODY
@@ -51,16 +71,18 @@
 
 </body>
 <table>
+    <caption> populacao das unidades federativas</caption> <!--- eh oq fica em cima da tabela, tipo um textinho-->
     <thead>
         <tr>
-            <th>Estado</th> <!--- th eh titulo-->
-            <th>Populacao</th>
+            <th scope="col">Estado</th>
+            <!--- th eh titulo, se tiver 2 th vao ter duas colunas com esses titulos, esse col eh p confirmar q ele vai ser o titulo da coluna. esse scope col eh p mostrar q ele eh o titulo de uma coluna, e vai ter todas as informacoes e dados abaixo dele. o scope ROW, la no foot, eh pra mostrar q ele n vai ter nada em baixo, mas sim q ele vai ter a sua informacao na frente, n em baixo igual o col. n muda nada, mas faz sentido. semantica.-->
+            <th scope="col" style="width: 100px;">Populacao</th>
         </tr>
 
     </thead>
     <tbody>
         <tr>
-            <td>Sao Paulo</td> <!---td eh o dado-->
+            <td>Sao Paulo</td> <!---td eh o dado, lembrando q vai ta na ordem-->
             <td class="num">45 919 049</td>
         </tr>
         <td>Minas Gerais</td>
@@ -94,11 +116,107 @@
     </tbody>
     <tfoot> <!---se colocasse o pe la em cima, n ia mudar em nada, pq eh por hierarquia-->
         <tr>
-            <th>Total de habitantes </th>
+            <th scope="row">Total de habitantes </th>
             <td class="num"><strong>138.675.642</strong></td>
         </tr>
 
     </tfoot>
 </table>
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ut, recusandae ea laboriosam neque at nulla nemo
+    atque, beatae consectetur quae amet. Ipsum, provident eos a voluptatum perferendis neque libero. Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Doloremque laudantium asperiores odit eveniet aliquid culpa nesciunt voluptas
+    consequatur? Reiciendis temporibus fugit itaque non sed possimus aliquam pariatur quidem ipsa necessitatibus. Lorem,
+    ipsum dolor sit amet consectetur adipisicing elit. Neque vitae enim, quas optio debitis incidunt, voluptatem
+    mollitia sunt voluptas, culpa ullam natus obcaecati velit? In maxime sint doloremque vel doloribus! Lorem ipsum
+    dolor sit amet consectetur adipisicing elit. Voluptatum, ut. Natus officia esse, modi porro possimus vero similique
+    vitae ratione explicabo soluta quibusdam consequuntur sunt et veritatis voluptate. Earum, facilis! Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Ab quos, molestias veniam velit nam voluptas cumque officiis consectetur iure
+    fugit eius porro laborum ipsum dolor odio cupiditate. Quasi, enim quae. Lorem ipsum dolor, sit amet consectetur
+    adipisicing elit. In consectetur pariatur debitis repellat voluptatem ullam, ducimus ab sapiente numquam quidem
+    ipsam voluptate molestias eligendi quo id architecto esse consequatur itaque? Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Labore, dolor quaerat deleniti pariatur autem optio enim amet quis vel laboriosam nam alias
+    laborum harum? Quaerat cumque laudantium omnis consequuntur iusto.
+</p>
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ut, recusandae ea laboriosam neque at nulla nemo
+    atque, beatae consectetur quae amet. Ipsum, provident eos a voluptatum perferendis neque libero. Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Doloremque laudantium asperiores odit eveniet aliquid culpa nesciunt voluptas
+    consequatur? Reiciendis temporibus fugit itaque non sed possimus aliquam pariatur quidem ipsa necessitatibus. Lorem,
+    ipsum dolor sit amet consectetur adipisicing elit. Neque vitae enim, quas optio debitis incidunt, voluptatem
+    mollitia sunt voluptas, culpa ullam natus obcaecati velit? In maxime sint doloremque vel doloribus! Lorem ipsum
+    dolor sit amet consectetur adipisicing elit. Voluptatum, ut. Natus officia esse, modi porro possimus vero similique
+    vitae ratione explicabo soluta quibusdam consequuntur sunt et veritatis voluptate. Earum, facilis! Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Ab quos, molestias veniam velit nam voluptas cumque officiis consectetur iure
+    fugit eius porro laborum ipsum dolor odio cupiditate. Quasi, enim quae. Lorem ipsum dolor, sit amet consectetur
+    adipisicing elit. In consectetur pariatur debitis repellat voluptatem ullam, ducimus ab sapiente numquam quidem
+    ipsam voluptate molestias eligendi quo id architecto esse consequatur itaque? Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Labore, dolor quaerat deleniti pariatur autem optio enim amet quis vel laboriosam nam alias
+    laborum harum? Quaerat cumque laudantium omnis consequuntur iusto.
+</p>
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ut, recusandae ea laboriosam neque at nulla nemo
+    atque, beatae consectetur quae amet. Ipsum, provident eos a voluptatum perferendis neque libero. Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Doloremque laudantium asperiores odit eveniet aliquid culpa nesciunt voluptas
+    consequatur? Reiciendis temporibus fugit itaque non sed possimus aliquam pariatur quidem ipsa necessitatibus. Lorem,
+    ipsum dolor sit amet consectetur adipisicing elit. Neque vitae enim, quas optio debitis incidunt, voluptatem
+    mollitia sunt voluptas, culpa ullam natus obcaecati velit? In maxime sint doloremque vel doloribus! Lorem ipsum
+    dolor sit amet consectetur adipisicing elit. Voluptatum, ut. Natus officia esse, modi porro possimus vero similique
+    vitae ratione explicabo soluta quibusdam consequuntur sunt et veritatis voluptate. Earum, facilis! Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Ab quos, molestias veniam velit nam voluptas cumque officiis consectetur iure
+    fugit eius porro laborum ipsum dolor odio cupiditate. Quasi, enim quae. Lorem ipsum dolor, sit amet consectetur
+    adipisicing elit. In consectetur pariatur debitis repellat voluptatem ullam, ducimus ab sapiente numquam quidem
+    ipsam voluptate molestias eligendi quo id architecto esse consequatur itaque? Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Labore, dolor quaerat deleniti pariatur autem optio enim amet quis vel laboriosam nam alias
+    laborum harum? Quaerat cumque laudantium omnis consequuntur iusto.
+</p>
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ut, recusandae ea laboriosam neque at nulla nemo
+    atque, beatae consectetur quae amet. Ipsum, provident eos a voluptatum perferendis neque libero. Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Doloremque laudantium asperiores odit eveniet aliquid culpa nesciunt voluptas
+    consequatur? Reiciendis temporibus fugit itaque non sed possimus aliquam pariatur quidem ipsa necessitatibus. Lorem,
+    ipsum dolor sit amet consectetur adipisicing elit. Neque vitae enim, quas optio debitis incidunt, voluptatem
+    mollitia sunt voluptas, culpa ullam natus obcaecati velit? In maxime sint doloremque vel doloribus! Lorem ipsum
+    dolor sit amet consectetur adipisicing elit. Voluptatum, ut. Natus officia esse, modi porro possimus vero similique
+    vitae ratione explicabo soluta quibusdam consequuntur sunt et veritatis voluptate. Earum, facilis! Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Ab quos, molestias veniam velit nam voluptas cumque officiis consectetur iure
+    fugit eius porro laborum ipsum dolor odio cupiditate. Quasi, enim quae. Lorem ipsum dolor, sit amet consectetur
+    adipisicing elit. In consectetur pariatur debitis repellat voluptatem ullam, ducimus ab sapiente numquam quidem
+    ipsam voluptate molestias eligendi quo id architecto esse consequatur itaque? Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Labore, dolor quaerat deleniti pariatur autem optio enim amet quis vel laboriosam nam alias
+    laborum harum? Quaerat cumque laudantium omnis consequuntur iusto.
+</p>
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ut, recusandae ea laboriosam neque at nulla nemo
+    atque, beatae consectetur quae amet. Ipsum, provident eos a voluptatum perferendis neque libero. Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Doloremque laudantium asperiores odit eveniet aliquid culpa nesciunt voluptas
+    consequatur? Reiciendis temporibus fugit itaque non sed possimus aliquam pariatur quidem ipsa necessitatibus. Lorem,
+    ipsum dolor sit amet consectetur adipisicing elit. Neque vitae enim, quas optio debitis incidunt, voluptatem
+    mollitia sunt voluptas, culpa ullam natus obcaecati velit? In maxime sint doloremque vel doloribus! Lorem ipsum
+    dolor sit amet consectetur adipisicing elit. Voluptatum, ut. Natus officia esse, modi porro possimus vero similique
+    vitae ratione explicabo soluta quibusdam consequuntur sunt et veritatis voluptate. Earum, facilis! Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Ab quos, molestias veniam velit nam voluptas cumque officiis consectetur iure
+    fugit eius porro laborum ipsum dolor odio cupiditate. Quasi, enim quae. Lorem ipsum dolor, sit amet consectetur
+    adipisicing elit. In consectetur pariatur debitis repellat voluptatem ullam, ducimus ab sapiente numquam quidem
+    ipsam voluptate molestias eligendi quo id architecto esse consequatur itaque? Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Labore, dolor quaerat deleniti pariatur autem optio enim amet quis vel laboriosam nam alias
+    laborum harum? Quaerat cumque laudantium omnis consequuntur iusto.
+</p>
+<p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ut, recusandae ea laboriosam neque at nulla nemo
+    atque, beatae consectetur quae amet. Ipsum, provident eos a voluptatum perferendis neque libero. Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Doloremque laudantium asperiores odit eveniet aliquid culpa nesciunt voluptas
+    consequatur? Reiciendis temporibus fugit itaque non sed possimus aliquam pariatur quidem ipsa necessitatibus. Lorem,
+    ipsum dolor sit amet consectetur adipisicing elit. Neque vitae enim, quas optio debitis incidunt, voluptatem
+    mollitia sunt voluptas, culpa ullam natus obcaecati velit? In maxime sint doloremque vel doloribus! Lorem ipsum
+    dolor sit amet consectetur adipisicing elit. Voluptatum, ut. Natus officia esse, modi porro possimus vero similique
+    vitae ratione explicabo soluta quibusdam consequuntur sunt et veritatis voluptate. Earum, facilis! Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Ab quos, molestias veniam velit nam voluptas cumque officiis consectetur iure
+    fugit eius porro laborum ipsum dolor odio cupiditate. Quasi, enim quae. Lorem ipsum dolor, sit amet consectetur
+    adipisicing elit. In consectetur pariatur debitis repellat voluptatem ullam, ducimus ab sapiente numquam quidem
+    ipsam voluptate molestias eligendi quo id architecto esse consequatur itaque? Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Labore, dolor quaerat deleniti pariatur autem optio enim amet quis vel laboriosam nam alias
+    laborum harum? Quaerat cumque laudantium omnis consequuntur iusto.
+</p>
 
 </html>
