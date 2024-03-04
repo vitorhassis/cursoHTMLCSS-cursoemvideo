@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas responsivas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.2em;
+            font-weight: bolder;
+            padding: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: aliceblue;
+        }
+
+        div#container {
+            overflow-x: auto;
+            /*dica. independente do tamanho, ele permita a rolagem lateral usando o scroll ou o dedo, sem mexer no conteudo base, ou seja, os textos em cima. vc faz uma div em toda a tabela, com overflow-x. se vc n fizer isso, qnd vc scrollar no x o texto em cima vai junto. ent pra scrollar so a tabela, vc faz essa div toda na tabela com o overflow-x auto*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>tabelas em telas pequenas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aliquam delectus enim maiores consequatur
+        molestiae, hic beatae cumque est tempore quam nesciunt incidunt, quibusdam ratione iusto quidem illo quae
+        consequuntur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi enim voluptas dolore! Distinctio
+        laboriosam accusamus quam laborum quis, recusandae tempore ducimus ipsa odit minima impedit amet aut tempora nam
+        hic?</p>
+    <div id="container">
+        <table>
+            <caption>tabelas responsivas</caption>
+            <thead>
+                <tr>
+                    <th>produto</th>
+                    <th>jan</th>
+                    <th>fev</th>
+                    <th>mar</th>
+                    <th>abr</th>
+                    <th>mai</th>
+                    <th>jun</th>
+                    <th>jul</th>
+                    <th>ago</th>
+                    <th>set</th>
+                    <th>out</th>
+                    <th>nov</th>
+                    <th>dez</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+</body>
+
+</html>

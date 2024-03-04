@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio de tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        .destaque {
+            background-color: yellow;
+        }
+
+        /*pra linha eh facil*/
+
+        .destaque1 {
+            background-color: rgb(3, 212, 3);
+        }
+
+        .cnome {
+            background-color: aqua;
+        }
+
+        .csexo {
+            background-color: beige;
+        }
+
+        .cgrupo {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>exercicio de tabela</h1>
+
+    <table>
+        <!---isso eh p modificar colunas, que eh mais dificil do que linhas. nesse caso, vc cria o numero de col que tiver de colunas, e adiciona classe pra elas na ordem das colunas, ai vc consegue modifica-las com uma class pra cada coluna-->
+        <colgroup>
+            <col class="cnome">
+            <col class="cgrupo" span="2">
+            <!--aq nos tiramos um col, e colocamos uma espancao de 2 colunas na segunda coluna, ou seja, um col para duas colunas-->
+
+            <col class="cprof">
+
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">nome</th>
+            <th scope="col">sexo</th>
+            <th scope="col">idade</th>
+            <th scope="col">profissão</th>
+        </tr>
+        <tr>
+            <td class="destaque1">Ana</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>claudio</td>
+            <td>M</td>
+            <td>28</td>
+            <td>programador</td>
+        </tr>
+        <tr>
+            <td>gustavo</td>
+            <td>M</td>
+            <td>42</td>
+            <td>professor</td>
+        </tr>
+        <tr>
+            <td>helio</td>
+            <td>M</td>
+            <td>19</td>
+            <td>vendedor</td>
+        </tr>
+        <tr>
+            <td>maria</td>
+            <td>F</td>
+            <td>39</td>
+            <td>medica</td>
+        </tr>
+        <tr class="destaque">
+            <td>otavio</td>
+            <td>M</td>
+            <td>22</td>
+            <td>nutricionista</td>
+        </tr>
+
+
+
+
+    </table>
+
+</body>
+
+</html>
