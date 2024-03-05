@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste de formulario</title>
+</head>
+<body>
+    <h1>teste de formulario</h1>
+    <form action="cadastro.php" method="POST" autocomplete="on">
+         <p>
+            <label for="iusu">Usuario:</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10" placeholder="nome do usuario" autocomplete="username">
+         </p>
+         <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen"  required minlength="5" size="10" placeholder="digite a senha" autocomplete="current-password"> <!--- input type PASSWORD n deixa ver a senha. e REQUIRED eh para ser obrigatorio digitar o q pede. se vc nao preencher e enviar, ele pede para voce digitar. e o minlength eh para ele definir minimo de digitos, caracteres por exemplo. o SIZE= voce cria uma rolagem lateral, a caixa fica menorzinha. placeholder eh tipo ficar uma dica, quase transparente no fundo da caixa. AUTOCOMPLITE = se vc deixar on, e colocar dentro da tag input, vc consegue deixar opcoes dele entender oq pode ser completado, ou seja, ele vai sugerir nomes de login ja usados. na senha a mesma coisa. o current-password, faria com que ele buscasse a senha registrada. ja o new password, seria para cadastrar o nome com senha-->
+         </p>
+         <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+            <!--- aq temos o submit para voce enviar, e o reset para limpar as caixinhas-->
+         </p>
+        </form>
+    
+</body>
+</html>

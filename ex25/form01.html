@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>meu primeiro formulario</h1>
+
+
+
+    <!--- primeiro vc coloca o p com o nome, na frente vc coloca o input text, da name  e id, e envelopa a palavra com label e completa com o id para indicar-->
+
+    <!---esse action cadastro, seria para qnd vc clicar em enviar vc ser direcionado para outras coisas, mas n sabemos isso ainda-->
+
+    <!---esse method POST eh para nao aparecer escancaradamente na url oq vc colocou nas caixas. pq se fosse usuario e senha, ia ficar explicito seus dados. SE OS DADOS NAO FOREM SENSIVEIS = PESO, ALTURA, ESSAS COISAS usa GET. SE FOREM DADOS MAIS SENSIVEIS = SENHAS, ARQUIVOS COMO FOTOS, ETC. aparece tbm se ele souber mexer, mas por enquanto isso basta. -->
+
+    <form action="cadastro.php" method="POST" autocomplete="off"> <!---isso eh p n sugerir resposta-->
+        <!---input text eh pra fazer as caixinhas-->
+
+        <p><label for="inome">nome:</label> 
+            <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+    
+        <p><input type="submit" value="enviar"></p>
+
+        <!--- input submit eh pra fazer a caixinha de enviar-->
+        <!---vc precisa sempre identificar o name (html e php) e id (js e label) pra ter essa ligacao, pq se nao ele n tem ligacao nenhuma entre o "nome" e a caixa. vc da label na palavra, nesse caso nome e sobrenome, e indica o id dela. -->
+
+    </form>
+    
+</body>
+</html>
