@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-rb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <h1>teste de formulario</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        
+        
+        <!---lembrando que o input text eh oq faz a caixinha, vc coloca um label pra ter a ligacao entre o nome que vc deu e a caixinha. oq estiver no label sera o nome antes da caixinha. (colocamos o required maxlegth para ter limite de 30 palavras, placeholder para aparecer no fundo da caixa, uma dica, e autocomplete name para ele te sugerir nomes ja cadastrados.) mas a ordem eh primeiro vc coloca um P, depois envelopa ele com um LABEL, depois input text e coloca um msm id no input e label, para ter essa conexao entre label e input, lembrando q ja da pra fazer direto do label, etc. (lembrando que o type vc precisa por um nome e um id, eles podem ser igual mas vc difere o nome com o id por um i no comeco da palavra, pq ela vai ser indicada exatamente assim la no label) depois coloca adicionais. REQUIRED eh para ser obrigatorio completar o campo. o VALUE ja deixa uma numeracao pre definida no campo. ele anula o placeholder-->
+
+
+        <p>
+            <label for="inome">nome</label>
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="nome completo" autocomplete="name" required>
+        </p>
+        <p>
+            <label for="imedia">media</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5"> <!--- esse step eh para aceitar numeros de 0.5 em 0.5. typer number eh opara so aceitar numeros-->
+        </p>
+        <p>
+            <label for="imes">mes</label>
+            <input type="month" name="mes" id="imes" value="2024-06">
+        </p>
+        <p>
+            <label for="idia">dia da prova</label>
+            <input type="date" name="dia" id="idia">
+        </p>
+        <p>
+            <label for="ihora">horario da prova</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"> <!--- input submit e reset para enviar e limpar respec-->
+        </p>
+
+
+
+    </form>
+    
+</body>
+</html>
