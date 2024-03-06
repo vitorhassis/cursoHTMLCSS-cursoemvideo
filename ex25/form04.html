@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo de formulario</title>
+    <h1>exemplo de formulario</h1>
+    <form action="cadastro.php" method="get">
+        <fieldset>
+            <legend>dados pessoais</legend>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="itel">telefone</label>
+                <input type="tel" name="tel" id="itela" autocomplete="tel" required placeholder="(xx-xxxx-xxxx)"> <!--- tem uma tag chamada pattern, nela vc consegue meio que especificar oq vai estar dentro da caixa de numeros, mas ele pede para procurar isso por fora.-->
+            </p>
+            <p>
+                <input type="submit" value="enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset> <!--- essa tag fieldset chama grupo de campos, da essa separada no conteudo de formulario que voce criou, tbm tem a tag legends q fica escrito ali o que se trata os formularios. esse fieldset vc consegue separar esses formularios por ASSUNTOS, essa seria sua principal funcao -->
+
+
+
+
+
+
+
+
+    </form>
+</head>
+<body>
+    
+</body>
+</html>
