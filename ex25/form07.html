@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <h1>exemplo de formulario</h1>
+    <form action="cadastro.php" method="get" autocomplete="on"></form>
+    <p>
+        <label for="iest">estado</label>
+        <select name="estado" id="iest">
+        
+        <option value="" selected>---escolha---</option>
+        <optgroup label="regiao sudeste">
+            <option value="RJ">rio de janeiro</option>
+            <option value="SP">sao paulo</option>
+            <option value="MG">minas gerais </option>
+        </optgroup>
+
+        <optgroup label="regiao nordeste">
+            <option value="MA">maranhao</option>
+            <option value="PE">pernambuco</option>
+            <option value="RN">rio grande do norte</option>
+        </optgroup>
+    </select>
+
+        <!--- esse optgroup eh para vc meio q criar uma subdivisao dentro das opcoes, que nesse caso sera dividira as opcoes em regioes sudeste e nordeste-->
+        
+    </p>
+    
+</body>
+<p>
+    <input type="submit" value="enviar">
+    <input type="reset" value="limpar">
+</p>
+</html>
