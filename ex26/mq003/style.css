@@ -1,0 +1,45 @@
+/* RESUMINDO. NESSE EX VEMOS QUE VOCE PODE FAZER AS DECLARACOES DAQUELE JEITO DO EX ANTERIOR, OU SEJA, DIVIDIDO EM CLASSES DE CSS, SEPARADOS, OU TUDO JUNTO, COMO NESSE EXERCICIOS AQ, EU PREFIRO O OUTRO. fica bem mais organizado-*/
+
+@charset "UTF-8";
+    <style>
+        /*declaracoes gerais*/
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html body {
+            width: 100vw;
+            height: 100vh;
+            background-color:  #233eff;
+            background-size: contain; /*imagem inteira*/
+            background-repeat: no-repeat; /*n repetir a imagem*/
+            
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 3px 3px 0 #132186;
+        }
+
+        /*declaracoes retrato*/
+        @media screen and (orientation: portrait) {
+            body{
+                background-color: rgb(255, 17, 0);
+                background-image: url(../imagens/cev-portrait.jpg);
+                background-position: center bottom;
+            }
+            
+        }
+
+        /*declaracoes paisagem*/
+        @media screen and (orientation: landscape) {
+            body{
+    background-color: orange;
+    background-image: url(../imagens/cev-landscape.jpg);
+    background-position: left bottom; /*onde ele vai ficar fixado*/
+
+           }
+                                           
+        }
