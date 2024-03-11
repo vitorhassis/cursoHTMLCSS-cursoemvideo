@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/*estilo para impressoras*/
+
+*{
+    margin: 10px;
+    padding: 10px;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.em;
+    line-height: 1.5em;
+}
+
+menu {
+    display: none; /*nao sera exibido*. SOMENTE PARA IMPRESSORAS, quando for uma informacao talvez nao tao importante ou que ocuparia muito espaco na pag impressa, vc meio que tira uma parte da pag*/
+}
+
+article::after {
+    content: 'Esse artigo foi impresso atraves do site www.cursoemvideo.com'; /* esse article com dois ::, indica = depois do artigo. na sequencia no caso*/
+}
