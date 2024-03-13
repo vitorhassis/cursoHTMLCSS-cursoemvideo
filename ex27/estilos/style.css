@@ -1,0 +1,93 @@
+@charset "UTF-8";   
+
+
+/*ESSA EH A VERSAO MOBILE*/
+
+
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: gray;
+}
+
+header > h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+span {
+    background-color: black;
+    width: 100vw; /*hj ta diferente do video, ent n ta dando pra centralizar o hamburguer, n sei q oq fazer no momento*/
+    text-align: center;
+    padding: 10px;
+    color: white;
+    cursor: pointer; /*isso eh p qnd vc passar o cursor em cima, virar a maozinha*/
+    text-align: center;
+}
+
+span:hover {
+    background-color: white;
+    color: black;
+    
+}
+
+menu {
+    display: block;
+}
+
+body {
+    background-color: rgb(218, 218, 218);
+}
+
+menu > ul {
+    list-style-type: none;
+}
+
+menu a {
+
+    display: block;
+
+    
+    /*display block ja vem por padrao, mas voce coloca so pra confirmar. e com isso, voce organizar os elementos lado a lado e definirmos as propriedades de largura e altura*/
+
+    /*vale ressaltar tambem que o css das ul e li, eh feita atraves do a. nos so configuramos para nao ter aquela bolinha no comeco das listas, ou seja, fizemos um menu ul list style tyle none. nesse aq, menu a foi toda a config q vc quer mesmo nos itens da lista, que sao os links -a-. n esquecer disso. ate mesmo o hover, vc vai ver q vai ser no a*/
+
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(77, 77, 77);
+    color: white;
+    text-align: center;    /*coloca as listas no centro*/
+    border-top: 2px solid gray; /*vai ter esse gapzin entre as "listas"*/
+}
+
+main {
+    width: 90vw;
+    background-color: rgb(255, 255, 255);
+    margin: auto; /*centralizar*/
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px; /*ficar aquele gapzin em entre o menu e o article da main, ou seja, o escrito*/
+
+}
+
+menu a:hover { /*lembrando que isso eh config para quando vc passar o mouse em cima*/
+    background-color: gray;
+    
+
+}
+
+article h2 {
+    padding-bottom: 20px; /*espaco embaixo entre o h2 e o comeco do texto. padding eh o espaco de dentro*/
+}
+
+article p {
+    text-align: justify; /*pra deixar o texto certinho, com margem do texto colada, etc*/
+    margin-bottom: 10px;
+    text-indent: 20px; /*espaco no comeco de cada paragrafo*/
+
+}
