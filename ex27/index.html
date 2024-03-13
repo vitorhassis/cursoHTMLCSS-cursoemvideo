@@ -19,11 +19,11 @@
 <body>
     <header>
         <h1> Meu Site</h1>
-        <span class="material-symbols-outlined">menu</span>
+        <span class="material-symbols-outlined" onclick="clickMenu()">menu</span> <!--- esse onclick menu nada mais eh do que um pouco de javascript, ou seja, vamos usar um pouco para quando clicarmos no hamburguer, aparecer as opcoes-->
         
     
         </span>
-        <menu>
+        <menu id="itens">
             <ul>
                 <li><a href="#">opcao 1</a></li>
                 <li><a href="#">opcao 2</a></li>
@@ -49,8 +49,28 @@
             </p>
 
         </article>
-
     </main>
+    <script>
+        function clickMenu() {
+            if (itens.style.display =='block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+         }
+
+         /*para entender oq escrevemos em cima = if..... = SE O itens.style.display FOR IGUAL (se utiliza msm dois sinais de iguais para representar o IGUAl) a block, ou seja, se ele estiver sendo exibido eu vou esconde-los. essa acao do click seria essa segunda parte - itens.style.display ='none'. ou seja, le la de cima a parte da funcao. ao clicar no menu, se ele estiver aparecendo, ele vai "desaparecer", ou seja, vai fechar.
+
+         else (se nao), ou seja, ao clicar, se nao estiver sendo exibido, ele vai exibir, por isso o 'block em else.'
+
+
+         RESUMINDO: AO CLILCAR NO MENU, SE (if) ESTIVER APARECENDO, ELE VAI "DESAPARECER". SE NAO (else), OU SEJA, SE NAO ESTIVER APARECENDO NADA, ELE VAI APARECER. (n aparecer = none; aparecer = block)
+
+         vale ressaltar tbm que == significa igual. um simbolo apenas, ou seja, = simboliza recebe. */
+
+
+
+    </script>
     
 </body>
 </html>
