@@ -22,7 +22,7 @@ header > h1 {
     text-align: center;
 }
 
-span {
+i#burguer {
     background-color: black;
     width: 99vw; /*hj ta diferente do video, ent n ta dando pra centralizar o hamburguer, n sei q oq fazer no momento*/
     text-align: center;
@@ -32,7 +32,7 @@ span {
     text-align: center;
 }
 
-span:hover {
+i#burguer:hover {
     background-color: white;
     color: black;
     

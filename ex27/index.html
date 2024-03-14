@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    
+    <link rel="stylesheet" href="estilos/style.css"> 
+    <link rel="stylesheet" href="estilos/media-query.css">
     
     
     <!--- PARA COLOCAR UM ICON, VC COLA A PARTE DE HTML DELE AQ (Q TA NO SITE ICON GOOGLE, LA VC COPIA E COLA A PARTE ABAIXO DE STATIC ICON FONT, O PRIMEIRO Q APARECER), EMBAIXO DO TITULO PARA QUE SEJA POSSIVEL UTILIZA-LO.  DEPOIS, VC VAI ONDE VC QUER COLOCAR O MENU, GERALMENTE ABAIXO DO H1, NESTE CASO, MEU SITE, EMBAIXO DO H1 VC COLA A OUTRA PARTE QUE COMECA COM SPAN. E ENTRE OS > < VOCE COLOCA MENU. PARA CONFIGURAR O MENU, VC CRIA UM ID PARA ELE E DPS CONFIGURA EM CSS-->
@@ -14,15 +15,17 @@
 
 
 
-    <link rel="stylesheet" href="estilos/style.css">
+   
 </head>
 <body>
     <header>
         <h1> Meu Site</h1>
-        <span class="material-symbols-outlined" onclick="clickMenu()">menu</span> <!--- esse onclick menu nada mais eh do que um pouco de javascript, ou seja, vamos usar um pouco para quando clicarmos no hamburguer, aparecer as opcoes-->
+        <i id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span> <!--- esse onclick menu nada mais eh do que um pouco de javascript, ou seja, vamos usar um pouco para quando clicarmos no hamburguer, aparecer as opcoes-->
+
+            <!--- qnd vc copia o codigo, ele vem com span, eu troquei a tag por i-->
         
     
-        </span>
+        </i>
         <menu id="itens">
             <ul>
                 <li><a href="#">opcao 1</a></li>
@@ -51,24 +54,39 @@
         </article>
     </main>
     <script>
-        function clickMenu() {
-            if (itens.style.display =='block') {
-                itens.style.display = 'none'
+        function mudouTamanho(){
+            var itens = document.getElementById('itens');
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'none';
             } else {
-                itens.style.display = 'block'
+                itens.style.display = 'block';
             }
-         }
+        }
 
-         /*para entender oq escrevemos em cima = if..... = SE O itens.style.display FOR IGUAL (se utiliza msm dois sinais de iguais para representar o IGUAl) a block, ou seja, se ele estiver sendo exibido eu vou esconde-los. essa acao do click seria essa segunda parte - itens.style.display ='none'. ou seja, le la de cima a parte da funcao. ao clicar no menu, se ele estiver aparecendo, ele vai "desaparecer", ou seja, vai fechar.
+        function clickMenu() {
+            var itens = document.getElementById('itens');
+            if (itens.style.display === 'block') {
+                itens.style.display = 'none';
+            } else {
+                itens.style.display = 'bloc';
+            }
+        }
 
-         else (se nao), ou seja, ao clicar, se nao estiver sendo exibido, ele vai exibir, por isso o 'block em else.'
+        window.addEventListener('resize', mudouTamanho);
 
 
-         RESUMINDO: AO CLILCAR NO MENU, SE (if) ESTIVER APARECENDO, ELE VAI "DESAPARECER". SE NAO (else), OU SEJA, SE NAO ESTIVER APARECENDO NADA, ELE VAI APARECER. (n aparecer = none; aparecer = block)
-
-         vale ressaltar tbm que == significa igual. um simbolo apenas, ou seja, = simboliza recebe. */
-
-
+    /*para entender oq escrevemos em cima = if..... = SE O itens.style.display FOR IGUAL (se utiliza msm dois sinais de
+    iguais para representar o IGUAl) a block, ou seja, se ele estiver sendo exibido eu vou esconde-los. essa acao do click
+    seria essa segunda parte - itens.style.display ='none'. ou seja, le la de cima a parte da funcao. ao clicar no menu, se
+    ele estiver aparecendo, ele vai "desaparecer", ou seja, vai fechar.
+    
+    else (se nao), ou seja, ao clicar, se nao estiver sendo exibido, ele vai exibir, por isso o 'block em else.'
+    
+    
+    RESUMINDO: AO CLILCAR NO MENU, SE (if) ESTIVER APARECENDO, ELE VAI "DESAPARECER". SE NAO (else), OU SEJA, SE NAO ESTIVER
+    APARECENDO NADA, ELE VAI APARECER. (n aparecer = none; aparecer = block)
+    
+    vale ressaltar tbm que == significa igual. um simbolo apenas, ou seja, = simboliza recebe. */
 
     </script>
     
